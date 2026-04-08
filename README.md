@@ -1,7 +1,7 @@
 # 🌐 Shraxville: My first big project 
 
 ### 👋 So, what is this?
-Shraxville is my first full-scale dev project. I wanted to build a real-time cyber dashboard that looks like something out of a movie. It tracks fake global threats, shows network bandwidth, and lets you "mitigate" attacks through a terminal, i didn't want to make another basic app like i did for coursework or mini assigments, so i tried to make this as my own outside project to boost my potentail it’s just a simulation, but i made it to show recruiters (and myself) that I can handle a complex system that isn't just a standard class project.
+Shraxville is my first full-scale dev project. I wanted to build a real-time cyber dashboard that looks like something out of a movie. It tracks fake global threats, shows network bandwidth, and lets you "mitigate" attacks through a terminal, i didn't want to make another basic app like i did for coursework or mini assigments, so i tried to make this as my own outside project to boost my potentail it’s just a simulation, but i made it to show recruiters and myself that I can handle a complex system that isn't just a standard class project.
 
 ---
 
@@ -42,7 +42,7 @@ shraxville/
 ---
 
 ## ⚡ The hardest part 
-The **Synchronization Layer** was easily the toughest thing for me to wrap my head around. ik it sounds simple, but making sure that one single event—like a "SQL Injection" popping up—updated the map, shifted the charts, and triggered a sound alert all at the exact same time was a massive headache. 
+The **Synchronization Layer** was easily the toughest thing for me to wrap my head around. ik it sounds simple, but making sure that one single event like a SQL Injection popping updated the map, shifted the charts, and triggered a sound alert all at the exact same time was a massive headache. 
 
 I spent a whole weekend just debugging why the audio would play but the map wouldn't update honestly i was getting confused becuase it didnt show with any errors on the code i looked at it again and i just used a quick internet search for what i did wrong, finally got a answer (quick answer =  logic sitting in their own little bubbles) (long answer = i forgot to intergrate the audio and map together **link them to the same trigger.** basically the "event" was firing for the sound, but I didnt tell it to join together with the map script yet.) Once I finally integrated them into the same function, it worked instantly, but also kind of dissopointed that it was such a simple fix that i didnt even notice
 
@@ -63,4 +63,4 @@ This project was a massive step for me, as i was trying to make a big project to
 ---
 
 ## 👋 Thanks for stopping by!
-If you’ve made it this far, thanks for taking the time to check out my work. I really enjoyed building Shraxville, and I hope it shows that I’m not just about writing code, but also about the "why" and the "how" behind a project. I’m always looking to learn more and improve my skills, so if you have any feedback or just want to chat about dev stuff, feel free to reach out. Hopefully, this gives you a good idea of what I can do! 🚀
+If you’ve made it this far, thanks for taking the time to check out my work. I really enjoyed building Shraxville, and I hope it shows that I’m not just about writing code, but also about the why and the how behind a project. I’m always looking to learn more and improve my skills, so if you have any feedback or just want to chat about dev stuff, feel free to reach out. Hopefully, this gives you a good idea of what I can do! 🚀
