@@ -57,7 +57,7 @@ I spent a whole weekend just debugging why the audio would play but the map woul
 ---
 
 ## 🏁 Final thoughts
-This project was a massive step for me, as i was trying to make a big project to look good for my futureself for practice and potentail Using libraries like **Leaflet** and **Chart.js** was a game changer—it let me focus on the logic and the vibe instead of coding every little thing from scratch, im proud of this as its easily the best thing I’ve made so far.
+This project was a massive step for me, as i was trying to make a big project to look good for my futureself for practice and potentail Using libraries like **Leaflet** and **Chart.js** was a game changer it let me focus on the logic and the vibe instead of coding every little thing from scratch, im proud of this as its easily the best thing I’ve made so far.
 
 ---
 
