@@ -51,9 +51,8 @@ I spent a whole weekend just debugging why the audio would play but the map woul
 1. **Clone the repo** to your computer.
 2. **Open** `index.html` in your browser (no server needed, keeping it easy).
 3. **Login:**
-   * **User:** `mmm`
-   * **PIN:** `1234`
-   *(simple PIN works for the demo)*
+   * **User:** `mmm`*(simple USER 3X m m m)*
+   * **PIN:** `1234`*(simple PIN works for the demo)*
 
 ---
 
