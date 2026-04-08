@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHRAXVILLE | COMMAND CENTRE v4.6</title>
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- LOGIN -->
+<div id="login" class="login">
+    <div class="loginBox">
+        <div class="loginHeader">
+            <div class="loginSubtitle">SHRAXVILLE DOOR - SECURE ACCESS PORTAL</div>
+</div>
+        <div class="loginInfo">Enter your credentials below to continue</div>
+
+        <input id="user" placeholder="👤 USER NAME" autocomplete="off">
+        <input id="pass" type="password" placeholder="🔒 PIN NUMBER">
+        <label class="show-pass">
+            <input type="checkbox" id="showPass"> Show Password
+        </label>
+        <button class="auth-btn" onclick="secureLogin()">LOG IN</button>
+        <p id="loginError" style="display:none;">ACCESS DENIED</p>
+    </div>
+</div>
+
+
+<div class="sidebar">
+    <div>
+        <h2 class="brand">SHRAXVILLE TOOLS</h2>
+        <div class="nav-item" onclick="location.reload()">🔄 RE-FRESH</div>
+        <div class="nav-item" onclick="runScan()">🔍 Network Scan</div>
+        
+        <div class="scan-container">
+            <div class="scan-bar"><div id="scanProgress"></div></div>
+            <div id="scanStatus">SYSTEM SCAN</div>
+        </div>
+
+        <div class="nav-item attack-storm-btn" onclick="attackStorm()">⚡ ATTACK STORM</div>
+        <div class="nav-item" onclick="exportToPDF()">📊 EXPORT PDF</div>
+        <div class="nav-item" onclick="toggleTheme()">🌓 LIGHT/DARK</div>
+        <div class="nav-item" onclick="toggleAudio()" id="muteBtn">🔊 Audio: ON</div>
+        <div class="nav-item" onclick="lockDashboard()">🔒 LOCK SYSTEM</div>
+    </div>
+    <div class="system-footer">
+        STATUS: <span id="sysStatus">OPTIMAL</span><br>
+        NETWORK: <span id="netStatus" style="color:var(--neon-green)">ENCRYPTED</span>
+    </div>
+</div>
+
+<div class="main">
+    <div class="header">
+        <div class="title-group">
+            <h2>SHRAXVILLE DEFENCE ASSOCIATION</h2>
+            <small style="color: var(--accent);">DAN THREAT DETECTION</small>
+        </div>
+        <div id="clock" class="digital-clock">00:00:00</div>
+    </div>
+
+    <div class="alertsPanel" id="alertsPanel">
+        <div class="alertsHeader">
+            <span class="alertsTitle">[CRITICAL EVENT LOG]</span>
+            <span id="alertCount" class="alertsCount">0</span>
+        </div>
+        <div id="alertList" class="alertsList">
+            <div class="alertEmpty">No events yet. Waiting for data...</div>
+        </div>
+    </div>
+
+    <div class="aiPanel">
+        <div class="ai-header">DAN ENGINE</div>
+        <div id="aiLog"></div>
+    </div>
+
+    <div class="cards">
+        <div class="card">Network Load<h3 id="threatScore">15%</h3></div>
+        <div class="card">Anomalies Detected<h3 id="attackRate">0</h3></div>
+        <div class="card">Active Incidents<h3 id="alerts">0</h3></div>
+        <div class="card">Mitigated Threats<h3 id="mitigatedCount">1,240</h3></div>
+    </div>
+
+    <div class="charts-row">
+        <div class="chart-container">
+            <span class="chart-label">Traffic Gbps</span>
+            <div class="canvas-wrapper"><canvas id="lineChart"></canvas></div>
+        </div>
+        <div class="chart-container">
+            <span class="chart-label">Threat Types</span>
+            <div class="canvas-wrapper"><canvas id="pieChart"></canvas></div>
+        </div>
+    </div>
+
+    <div class="map-row">
+        <div id="map" class="map"></div>
+    </div>
+
+    <div class="feed-container">
+        <div class="feed-box">
+            <h3>LIVE TRAFFIC ANALYSIS</h3>
+            <div id="feed" class="attackFeed"></div>
+        </div>
+        <div class="feed-box">
+            <h3>System Activity</h3>
+            <div class="terminal-wrapper">
+    <div id="terminal" class="terminal"></div>
+<input id="terminalInput" type="text" placeholder="Enter command..." autocomplete="off">        </div>
+    </div>
+
+    <div class="table-container">
+        <h3>SECURITY FINDINGS</h3>
+        <table>
+            <thead>
+                <tr><th>Severity</th><th>Target</th><th>Vulnerability</th><th>Action</th></tr>
+            </thead>
+            <tbody id="tableBody"></tbody>
+        </table>
+    </div>
+
+    <div class="table-container">
+        <h3>SCAN HISTORY</h3>
+        <table>
+            <thead>
+                <tr><th>Timestamp</th><th>Status</th><th>Findings</th><th>Action</th></tr>
+            </thead>
+            <tbody id="scanHistoryBody"></tbody>
+        </table>
+    </div>
+</div>
+
+<script src="audio.js"></script>
+<script src="log.js"></script>
+<script src="charts.js"></script>
+<script src="maps.js"></script>
+<script src="simulation.js"></script>
+<script src="updates.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
