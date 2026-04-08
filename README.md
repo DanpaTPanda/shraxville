@@ -1,121 +1,66 @@
-Shraxville: Real-Time Cybersecurity Dashboard Simulation 
+# 🌐 Shraxville: My first big project 
 
-Shraxville is my first full-scale development project, a real-time cybersecurity dashboard simulation designed to visualize global threats, monitor network activity, and allow user interaction through mitigation controls. 
+### 👋 So, what is this?
+Shraxville is my first full-scale dev project. I wanted to build a real-time cyber dashboard that looks like something out of a movie. It tracks fake global threats, shows network bandwidth, and lets you "mitigate" attacks through a terminal, i didn't want to make another basic app like i did for coursework or mini assigments, so i tried to make this as my own outside project to boost my potentail it’s just a simulation, but i made it to show recruiters (and myself) that I can handle a complex system that isn't just a standard class project.
 
-Instead of building a basic project, I focused on creating something immersive, modular, and technically challenging. 
+---
 
- 
+## 🧠 What I actually look like to start the project
 
-Features 
+At the start i had no clue what to do as in whagt i want to do as big project to make a good practice for me. I knew some JS, but trying to get a map, a chart, and a sound to trigger at the same time was a massive when u start to build something without a proper idea on what to build.
 
-🌍 Real-time global threat simulation  
+* **Learning to keep things clean:** At first, my code was just one giant, messy file. It took me like ** 3 days (for context not a actual 3 days of 72 hours)** of it breaking constantly to realize I had to split it up into `audio.js`, `maps.js`, `charts.js`, etc. Once I did that, it was way easier to fix stuff. ik it looks like more files but i was easy to fix stuff and see things properly.
+* **Using free code/libraries:** One thing i learned is that you don't have to code everything from scratch. I used **Leaflet.js** for the map. 
+    * **Example (The Map):** I spent like **1-2 days** just reading the Leaflet docs and looking at random code snippets online to see how people made markers move. Instead of coding a whole world map which was easy, I just used their library and focused on making the attack lines look flashy and smooth.
+* **State Management:** This was the hardest part. I spent a whole weekend just trying to make it so when a threat happens, the chart updates AND the sound plays. I kept having bugs where the sound would play but the chart stayed still. It was annoying but ik i learned a lot from it.
 
-📊 Live data visualization (bandwidth + attack types)  
+---
 
-🗺️ Interactive world map with animated attack paths  
+## 🛠️ Tech I used
 
-🔊 Audio feedback system for alerts and UI interactions  
+* **Frontend:** Just HTML, CSS, and JS. Keeping it simple.
+* **The cool stuff:** **Chart.js** for the graphs and **Leaflet.js** for the world map.
+* **Sound:** Used the **Web Audio API**. I wanted it to feel alive, so I made it play alert sounds when high-severity threats pop up.
+* **Design:** Went for a "Cyberpunk" look. I added a toggle for light/dark mode, but dark mode is way better ngl.
 
-🔐 Login system with session validation  
+---
 
-🎛️ Terminal-style command input (scan, clear, etc.)  
+## 📂 The Files How it's split
 
-🌗 Light/Dark mode with cyberpunk UI design  
-
- 
-
-Technologies Used 
-
-Frontend: HTML, CSS, JavaScript  
-
-Libraries: Chart.js, Leaflet.js  
-
-APIs: Web Audio API  
-
-Architecture: Modular JavaScript structure  
-
- 
-
-Project Structure 
-
+```text
 shraxville/
-│── index.html 	# Core layout & entry point 
+├── index.html       # The main page
+├── styles.css       # All the neon styling
+├── main.js          # The "brain" that starts everything
+├── simulation.js    # This generates the fake attacks
+├── maps.js          # All my Leaflet map code
+├── charts.js        # The Chart.js logic
+├── audio.js         # The bleeps and bloops
+├── log.js           # Login stuff (User: mmm | PIN: 1234)
+└── updates.js       # UI and terminal commands
+```
+---
 
-│── styles.css 	# UI theme & animations 
+## ⚡ The hardest part 
+The **Synchronization Layer** was easily the toughest thing for me to wrap my head around. ik it sounds simple, but making sure that one single event—like a "SQL Injection" popping up—updated the map, shifted the charts, and triggered a sound alert all at the exact same time was a massive headache. 
 
-│── main.js 		# Global state & initialization 
-
-│── simulation.js 	# Threat generation engine 
-
-│── maps.js 		# Map rendering (Leaflet) 
-
-│── charts.js 		# Data visualization (Chart.js) 
-
-│── audio.js 		# Sound system (Web Audio API) 
-
-│── log.js 		# Authentication logic 
-
-│── updates.js	# UI interactions & controls 
-
-What I Learned 
-
-How to structure a modular JavaScript application  
-
-Integrating multiple libraries into a single real-time system  
-
-Managing shared state across components  
-
-Balancing UI design with usability  
-
-Debugging complex interactions between independent modules  
-
- 
-
-How to Run 
-
-Clone the repository  
-
-Open index.html in your browser  
-
-Login credentials:  
-
-User: mmm  
-
-PIN: 1234  
-
- 
-
-Key Challenge 
-
-The most difficult part of this project was connecting everything together ensuring that a single simulated event could: 
-
-Update the charts  
-
-Trigger a sound alert  
-
-Render on the map  
-
-Reflect in the UI simultaneously  
-
-Solving this made me significantly more confident in handling complex application logic. 
-
- 
-
-Future Improvements 
-
-Backend integration for persistent data  
-
-Real API-based threat feeds  
-
-Enhanced authentication system  
-
-Performance optimization for large-scale simulations  
+I spent a whole weekend just debugging why the audio would play but the map wouldn't update honestly i was getting confused becuase it didnt show with any errors on the code i looked at it again and i just used a quick internet search for what i did wrong, finally got a answer (quick answer =  logic sitting in their own little bubbles) (long answer = i forgot to intergrate the audio and map together **link them to the same trigger.** basically the "event" was firing for the sound, but I didnt tell it to join together with the map script yet.) Once I finally integrated them into the same function, it worked instantly, but also kind of dissopointed that it was such a simple fix that i didnt even notice
 
 
+## 🕹️ How to run
+1. **Clone the repo** to your computer.
+2. **Open** `index.html` in your browser (no server needed, keeping it easy).
+3. **Login:**
+   * **User:** `mmm`
+   * **PIN:** `1234`
+   *(simple PIN works for the demo)*
 
-Final Thoughts 
+---
 
-This project marks a major step in my development journey. It pushed me beyond fundamentals and helped me understand how real applications are structured and connected. 
-Final Thoughts 
+## 🏁 Final thoughts
+This project was a massive step for me, as i was trying to make a big project to look good for my futureself for practice and potentail Using libraries like **Leaflet** and **Chart.js** was a game changer—it let me focus on the logic and the vibe instead of coding every little thing from scratch, im proud of this as its easily the best thing I’ve made so far.
 
-This project marks a major step in my development journey. It pushed me beyond fundamentals and helped me understand how real applications are structured and connected. 
+---
+
+## 👋 Thanks for stopping by!
+If you’ve made it this far, thanks for taking the time to check out my work. I really enjoyed building Shraxville, and I hope it shows that I’m not just about writing code, but also about the "why" and the "how" behind a project. I’m always looking to learn more and improve my skills, so if you have any feedback or just want to chat about dev stuff, feel free to reach out. Hopefully, this gives you a good idea of what I can do! 🚀
