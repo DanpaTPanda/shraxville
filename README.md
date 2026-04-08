@@ -1,7 +1,7 @@
 # 🌐 Shraxville: My first big project 
 
 ### 👋 So, what is this?
-Shraxville is my first full-scale dev project. I wanted to build a real-time cyber dashboard that looks like something out of a movie. It tracks fake global threats, shows network bandwidth, and lets you "mitigate" attacks through a terminal, i didn't want to make another basic app like i did for coursework or mini assigments, so i tried to make this as my own outside project to boost my potentail it’s just a simulation, but i made it to show recruiters and myself that I can handle a complex system that isn't just a standard class project.
+Shraxville is my first fullscale dev project. I wanted to build a real time cyber dashboard that looks like something out of a movie. It tracks fake global threats, shows network bandwidth, and lets you "mitigate" attacks through a terminal, i didn't want to make another basic app like i did for coursework or mini assigments, so i tried to make this as my own outside project to boost my potentail it’s just a simulation, but i made it to show recruiters and myself that I can handle a complex system that isn't just a standard class project.
 
 ---
 
